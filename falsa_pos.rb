@@ -7,7 +7,7 @@ end
 def func(z)
     # return 3.0*(z**3) - 2.0*z - 3
     # return 4.0*(z**2) - 6.0*z
-    return
+    return 4.0*Math.exp(4.0*z)
 end
 
 
@@ -19,7 +19,7 @@ puts ("
     4e^(4x)
     ")
 
-t = Table.new ["i", "a", "b", "x", "error_x"]
+t = Table.new ["i", "a", "b", "x", "error_x", "f(a)", "f(b)"]
 i = 1
 
 a = 1
@@ -28,7 +28,7 @@ b = 2
 x = nil
 error = nil
 
-t.rows << [i, a, b, x, error]
+t.rows << [i, a, b, x, error, func(a), func(b)]
 i += 1
 (0..22).each do
     xn = get_x(a, b)
@@ -37,7 +37,7 @@ i += 1
     end
 
     # if error <= 0.0000001 then break end
-    t.rows << [i, a, b, xn, error]
+    t.rows << [i, a, b, xn, error, func(a), func(b)]
     a = xn
     x = xn
     i += 1
