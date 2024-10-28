@@ -8,7 +8,7 @@ def ctg(x)
   return 1 / Math.tan(x)
 end
 
-xysum = 1
+xysum = 0
 xctgsum = 1
 (0...x.length).each do |i|
   xysum += x[i] * y[i]

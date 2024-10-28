@@ -4,7 +4,7 @@
 x = [4.8, 5.1, 9.5, 10.0]
 y = [3.7, 5.2, 6.0, 8.4]
 
-xysum = 1
+xysum = 0
 (0...x.length).each do |i|
   xysum += x[i] * y[i]
 end
